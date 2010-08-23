@@ -1,0 +1,23 @@
+h1. Redmine Youtube Macro Plugin
+
+This is a "Redmine":http://www.redmine.org/ plugin that adds a new macro to embed "YouTube":http://youtube.com videos into wiki pages.
+
+h3. Usage
+
+To embed a video you have to extract the video key from the YouTube URL and provide it as input to the macro. For example the URL,
+
+"http://www.youtube.com/watch?v=4N3N1MlvVc4":http://www.youtube.com/watch?v=4N3N1MlvVc4
+
+is the YouTube link to Gary Jules version of Mad World. The video key for this URL is *4N3N1MlvVc4*. Use this key in they youtube macro as follows,
+
+*{{youtube(4N3N1MlvVc4)}}*
+
+You can also size the video if you have a specific space to fill using,
+
+*{{youtube(4N3N1MlvVc4,800,600)}}*
+
+The result is a nice YouTube video in your text content.
+
+h3. Example
+
+You can see an example "here":http://jwm.slavitica.net/p/projects/redmine-youtube.
