@@ -12,7 +12,7 @@ Redmine::Plugin.register :redmine_youtube do
 		desc = "Redmine Youtube Macro! The correct usage is {{youtube(&lt;video key&gt;,[&lt;width&gt;,&lt;height&gt;])}}. eg {{youtube(4N3N1MlvVc4)}} or {{youtube(4N3N1MlvVc4,800,600)}}</pre>"
 		# Register youtube macro
 		macro :youtube do |youtube_wiki_content, args|
-			RAILS_DEFAULT_LOGGER.info "Youtube Plugin (#{args.join(",")})"
+			::Rails.logger.info "Youtube Plugin (#{args.join(",")})"
 			v = ""
 			h = 400
 			w = 600
