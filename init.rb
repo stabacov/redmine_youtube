@@ -23,16 +23,7 @@ Redmine::Plugin.register :redmine_youtube do
 					h = args[2]
 				end
 				out = <<"EOF"
-<object width="#{w}" height="#{h}">
-  <param name="movie" value="http://www.youtube.com/v/#{v}?rel=1&fs=1"></param>
-  <param name="allowFullScreen" value="true"></param>
-  <param name="allowScriptAccess" value="always"></param>
-  <embed src="http://www.youtube.com/v/#{v}?rel=1&fs=1"
-    type="application/x-shockwave-flash"
-    allowscriptaccess="always"
-    width="#{w}" height="#{h}" 
-    allowfullscreen="true"></embed>
-</object>
+<iframe width="#{w}" height="#{h}" src="http://www.youtube.com/embed/#{v}" frameborder="0" allowfullscreen></iframe>
 EOF
 			else
 				out = "<pre>Error in youtube macro. The correct usage is {{youtube(&lt;video key&gt;,[&lt;width&gt;,&lt;height&gt;])}}. \r\neg {{youtube(4N3N1MlvVc4)}} or {{youtube(4N3N1MlvVc4,800,600)}}</pre>"
